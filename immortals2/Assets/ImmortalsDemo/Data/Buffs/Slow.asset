@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e570593ccae25e94283e76edd1b5e771, type: 3}
+  m_Name: Slow
+  m_EditorClassIdentifier: 
+  id: Slow
+  visualEffectPrefab: {fileID: 114432123474384846, guid: 15ee3913c9f4b844caca505ae1f950b2,
+    type: 2}
+  modifier:
+    moveDisabled: 0
+    moveSpeedFactor: -0.4
+    moveSpeedAdditive: 0
+    attackDisabled: 0
+    attackSpeedFactor: -0.4
+    attackSpeedAdditive: 0

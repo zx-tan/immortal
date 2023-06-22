@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: Wolf
+  m_EditorClassIdentifier: 
+  id: wolf
+  longName: Wolf (level 1)
+  shortName: Wolf
+  unitType: 3
+  desc: Wolf description here.
+  cardUI: {fileID: 0}
+  maxStack: 2
+  cost: 6
+  isDefensive: 0
+  isOffensive: 0
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1344550618320288, guid: 2dc075a163208b14eaffafebe30c0dc3,
+    type: 2}
+  visualPrefab: {fileID: 1506396930284886, guid: 237878ebe8a13864c84f2fb21745557f,
+    type: 2}
+  bodyRadius: 2
+  initialTowerAngle: 0
+  maxHealth: 400
+  jumpPrepareTime: 0
+  jumpSpeed: 0
+  moveSpeed: 8
+  navAgentRadius: 0.45
+  navAreaMask: 1
+  avoidancePriority: 40
+  searchRate: 0.2
+  seekRadius: 18
+  typesToSeek: 60
+  favoriteTarget: 0
+  defaultAttack: {fileID: 114260027610700438, guid: e59eb8ee842ac7b499647bef2ed2a78f,
+    type: 2}
+  deathAttack: {fileID: 0}
+  attackDamage: 25
+  attackCooldown: 1.5
+  attackRange: 1.5

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53a853f6072c8c41b4967bf6a3fb82f, type: 3}
+  m_Name: GoblinArmy
+  m_EditorClassIdentifier: 
+  id: goblinArmy
+  longName: Goblin Army (level 1)
+  shortName: Goblin Army
+  unitType: 3
+  desc: Goblin army description here.
+  cardUI: {fileID: 21300000, guid: 9df5b7e7eeca298469a6d9df588a8ce7, type: 3}
+  maxStack: 4
+  cost: 5
+  isDefensive: 0
+  isOffensive: 1
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1187647440657590, guid: f2f7a6e7d317ed54385fa68854254a75,
+    type: 2}
+  visualPrefab: {fileID: 0}
+  bodyRadius: 0.6
+  initialTowerAngle: 0
+  maxHealth: 100
+  jumpPrepareTime: 0
+  jumpSpeed: 8
+  moveSpeed: 8
+  navAgentRadius: 0.6
+  navAreaMask: 1
+  avoidancePriority: 50
+  searchRate: 2
+  seekRadius: 12
+  typesToSeek: 30
+  favoriteTarget: -1
+  defaultAttack: {fileID: 0}
+  deathAttack: {fileID: 0}
+  attackDamage: 80
+  attackCooldown: 1
+  attackRange: 2
+  formation: 0
+  formationDistance: 4
+  formationInitAngle: 180
+  spawnedUnits:
+  - {fileID: 11400000, guid: b8d62d15530fdf0468df910848a57ffe, type: 2}
+  - {fileID: 11400000, guid: b8d62d15530fdf0468df910848a57ffe, type: 2}
+  - {fileID: 11400000, guid: b8d62d15530fdf0468df910848a57ffe, type: 2}
+  - {fileID: 11400000, guid: c3c9502d9c2c9ea449be75f5c5a97459, type: 2}
+  - {fileID: 11400000, guid: c3c9502d9c2c9ea449be75f5c5a97459, type: 2}
+  - {fileID: 11400000, guid: c3c9502d9c2c9ea449be75f5c5a97459, type: 2}

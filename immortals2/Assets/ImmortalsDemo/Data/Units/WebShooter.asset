@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: WebShooter
+  m_EditorClassIdentifier: 
+  id: webShooter
+  longName: Web Shooter (level 1)
+  shortName: Web Shooter
+  unitType: 2
+  desc: Web shooter description here.
+  cardUI: {fileID: 21300000, guid: 715da08c1690df44fa40cdaacecfecf4, type: 3}
+  maxStack: 4
+  cost: 3
+  isDefensive: 1
+  isOffensive: 1
+  defenseController: {fileID: 1919837414422790, guid: 838bc0535861e1a4194cde4bc33cdd77,
+    type: 2}
+  attackController: {fileID: 0}
+  visualPrefab: {fileID: 1695097253678608, guid: 93100d2cd0cbab44bb669623d9f3e0ca,
+    type: 2}
+  bodyRadius: 0.6
+  initialTowerAngle: 2
+  maxHealth: 1000
+  jumpPrepareTime: 0
+  jumpSpeed: 8
+  moveSpeed: 5
+  navAgentRadius: 0.6
+  navAreaMask: 1
+  avoidancePriority: 50
+  searchRate: 2
+  seekRadius: 25
+  typesToSeek: -1
+  favoriteTarget: -1
+  defaultAttack: {fileID: 114779516825475234, guid: eda9fe079b0af5f458d472e60c152012,
+    type: 2}
+  deathAttack: {fileID: 0}
+  attackDamage: 100
+  attackCooldown: 2
+  attackRange: 25

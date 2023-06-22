@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b962ec14e1523498a9d37fd7c6ab7f, type: 3}
+  m_Name: OrcAgent
+  m_EditorClassIdentifier: 
+  id: orc
+  shortName: Orc
+  typeName: Hero
+  desc: 
+  gameplayPrefab: {fileID: 1344550618320288, guid: 2dc075a163208b14eaffafebe30c0dc3,
+    type: 2}
+  visualPrefab: {fileID: 1629299738610962, guid: 27926a58d9098fa4390bb9c2221b7dcd,
+    type: 2}

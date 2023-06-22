@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: FlakCannon
+  m_EditorClassIdentifier: 
+  id: flakCannon
+  longName: Flak Cannon (level 1)
+  shortName: Flak Cannon
+  unitType: 2
+  desc: Flak Cannon unit description here.
+  cardUI: {fileID: 21300000, guid: ee528400213415a448a6e4e374b384f2, type: 3}
+  maxStack: 4
+  cost: 2
+  isDefensive: 1
+  isOffensive: 0
+  defenseController: {fileID: 1919837414422790, guid: 838bc0535861e1a4194cde4bc33cdd77,
+    type: 2}
+  attackController: {fileID: 0}
+  visualPrefab: {fileID: 1957239546826630, guid: 9d700a78dffdde94b9b4801ee1bf58be,
+    type: 2}
+  bodyRadius: 3.1
+  initialTowerAngle: 2
+  maxHealth: 1000
+  jumpPrepareTime: 0
+  jumpSpeed: 8
+  moveSpeed: 5
+  navAgentRadius: 0.8
+  navAreaMask: 1
+  avoidancePriority: 50
+  searchRate: 0.2
+  seekRadius: 30
+  typesToSeek: 1
+  favoriteTarget: 1
+  defaultAttack: {fileID: 114779516825475234, guid: 74bd9e5b46fabbb49a61a69bf7ca94c1,
+    type: 2}
+  deathAttack: {fileID: 0}
+  attackDamage: 250
+  attackCooldown: 0.5
+  attackRange: 20

@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1187647440657590}
+  m_IsPrefabAsset: 1
+--- !u!1 &1187647440657590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4466531083536820}
+  - component: {fileID: 114190766979412116}
+  - component: {fileID: 114615543845468458}
+  - component: {fileID: 114686003082170362}
+  - component: {fileID: 195168835423983188}
+  - component: {fileID: 54615608980357854}
+  - component: {fileID: 114973056473417426}
+  - component: {fileID: 114723207918586588}
+  - component: {fileID: 114758589006982922}
+  - component: {fileID: 114826360599464748}
+  m_Layer: 0
+  m_Name: TroopController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4466531083536820
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_LocalRotation: {x: 0, y: -0.87074214, z: 0, w: 0.4917399}
+  m_LocalPosition: {x: 23.48, y: 0, z: 15.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -121.09, z: 0}
+--- !u!54 &54615608980357854
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &114190766979412116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 808bb865c03c01c49b4ce1d5355fa786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualModule: {fileID: 0}
+--- !u!114 &114615543845468458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951aa0c3b6466694697d8a51a3fda53a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UnitID: 20
+  m_OwnerID: 0
+--- !u!114 &114686003082170362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85926166e7fd5884f81e149a1174ccbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_selectableCollider: {fileID: 0}
+  m_priority: 0
+  m_IsSelected: 0
+  m_IsHighlighted: 0
+  m_IsHovered: 0
+  colliderProperty: selectable
+  markerProperty: selection_marker
+  colorProperty: _EmisColor
+  selectedColor: {r: 0.06, g: 0.81, b: 0.01, a: 0.8}
+  highlightedColor: {r: 0.83, g: 0.73, b: 0.18, a: 0.85}
+  markerRenderer: {fileID: 0}
+--- !u!114 &114723207918586588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b91869884b22a44b19e69561a32603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  configuration:
+    maxHealth: 1
+    startingHealth: 1
+    alignment:
+      unityObjectReference: {fileID: 11400000, guid: 2aaafd1d24f14b44d8562ccc275f6ccd,
+        type: 2}
+--- !u!114 &114758589006982922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9ce9e5f18da8744b0a79cf2713c3af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disabled: 0
+  initialDestNode: {fileID: 0}
+  detectDistance: 2
+--- !u!114 &114826360599464748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9196e7a35a5a44d89b7a5db718f04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  troopConfigs: []
+  units: []
+  formationType: 0
+  offset: 2
+  minWaitDistance: 10
+  repathTick: 0.1
+  initAngle: 0
+  troopCorrectionMaxDist: 0.5
+  SpeedIncrease: 0.2
+--- !u!114 &114973056473417426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3865c78a51349354783a4a8ec19ac445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyDelay: 3.4
+  VFX: {fileID: 0}
+  script: {fileID: 0}
+  config: {fileID: 0}
+  health: 200
+  maxHealth: 200
+  shortName: Bats
+  stats:
+    MoveSpeed:
+      src: 0
+      mult: 0
+      add: 0
+    AttackSpeed:
+      src: 0
+      mult: 0
+      add: 0
+    moveDisabled: 0
+    attackDisabled: 0
+  jumpPrepareTime: 0.5
+  jumpSpeed: 8
+  warpJumps: 1
+--- !u!195 &195168835423983188
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1187647440657590}
+  m_Enabled: 0
+  m_AgentTypeID: -1372625422
+  m_Radius: 0.1
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 450
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0
+  m_WalkableMask: 7
+  m_ObstacleAvoidanceType: 0

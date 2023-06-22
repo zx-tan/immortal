@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: GoblinRider
+  m_EditorClassIdentifier: 
+  id: goblin_rider
+  longName: Goblin Rider (level 1)
+  shortName: Goblin Rider
+  unitType: 3
+  desc: Goblin rider description here.
+  cardUI: {fileID: 0}
+  maxStack: 2
+  cost: 6
+  isDefensive: 0
+  isOffensive: 0
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1344550618320288, guid: 2dc075a163208b14eaffafebe30c0dc3,
+    type: 2}
+  visualPrefab: {fileID: 1878493819945620, guid: 10db9f8f6f019214493a9db5beddc801,
+    type: 2}
+  bodyRadius: 2
+  initialTowerAngle: 0
+  maxHealth: 1000
+  jumpPrepareTime: 0.72
+  jumpSpeed: 64
+  moveSpeed: 8
+  navAgentRadius: 0.6
+  navAreaMask: 5
+  avoidancePriority: 50
+  searchRate: 0.2
+  seekRadius: 30
+  typesToSeek: 60
+  favoriteTarget: 16
+  defaultAttack: {fileID: 114260027610700438, guid: 4d28bae2f73f7db49950cdce4cedc2f2,
+    type: 2}
+  deathAttack: {fileID: 0}
+  attackDamage: 33
+  attackCooldown: 1.5
+  attackRange: 3.2

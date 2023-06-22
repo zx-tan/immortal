@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53a853f6072c8c41b4967bf6a3fb82f, type: 3}
+  m_Name: Bats
+  m_EditorClassIdentifier: 
+  id: bats
+  longName: Bats (level 1)
+  shortName: Bats
+  unitType: 0
+  desc: Bats unit description here.
+  cardUI: {fileID: 21300000, guid: ef082454c8199854c83bed872ab7a214, type: 3}
+  maxStack: 2
+  cost: 3
+  isDefensive: 0
+  isOffensive: 1
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1187647440657590, guid: f2f7a6e7d317ed54385fa68854254a75,
+    type: 2}
+  visualPrefab: {fileID: 0}
+  bodyRadius: 0.4
+  initialTowerAngle: 0
+  maxHealth: 0
+  jumpPrepareTime: 0
+  jumpSpeed: 8
+  moveSpeed: 5
+  navAgentRadius: 0.4
+  navAreaMask: 1
+  avoidancePriority: 80
+  searchRate: 2
+  seekRadius: 12
+  typesToSeek: -1
+  favoriteTarget: -1
+  defaultAttack: {fileID: 0}
+  deathAttack: {fileID: 0}
+  attackDamage: 1.2
+  attackCooldown: 2
+  attackRange: 2
+  formation: 0
+  formationDistance: 1.5
+  formationInitAngle: 0
+  spawnedUnits:
+  - {fileID: 11400000, guid: d913a7f0c941c41459265f9831799f94, type: 2}
+  - {fileID: 11400000, guid: d913a7f0c941c41459265f9831799f94, type: 2}
+  - {fileID: 11400000, guid: d913a7f0c941c41459265f9831799f94, type: 2}
+  - {fileID: 11400000, guid: d913a7f0c941c41459265f9831799f94, type: 2}
+  - {fileID: 11400000, guid: d913a7f0c941c41459265f9831799f94, type: 2}

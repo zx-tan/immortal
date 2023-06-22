@@ -1,0 +1,8 @@
+*.csproj
+*.sln
+immortals2/Library/
+immortals2/obj/
+immortals2/Temp/
+.vs/
+*.apk
+immortals2/Docs/

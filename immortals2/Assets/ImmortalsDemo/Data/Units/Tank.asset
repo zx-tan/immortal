@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: Tank
+  m_EditorClassIdentifier: 
+  id: tank
+  longName: Tank (level 1)
+  shortName: Tank
+  unitType: 4
+  desc: Tank unit description here.
+  cardUI: {fileID: 21300000, guid: 717cab5d72f315b478fbd9960a685d63, type: 3}
+  maxStack: 2
+  cost: 8
+  isDefensive: 0
+  isOffensive: 1
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1344550618320288, guid: 2dc075a163208b14eaffafebe30c0dc3,
+    type: 2}
+  visualPrefab: {fileID: 1293168351356438, guid: d5faf71789486e64da5731f3e8bed10f,
+    type: 2}
+  bodyRadius: 3.46
+  initialTowerAngle: 0
+  maxHealth: 600
+  jumpPrepareTime: 0
+  jumpSpeed: 8
+  moveSpeed: 3.5
+  navAgentRadius: 1.2
+  navAreaMask: 1
+  avoidancePriority: 20
+  searchRate: 0.2
+  seekRadius: 27.5
+  typesToSeek: 60
+  favoriteTarget: 16
+  defaultAttack: {fileID: 114779516825475234, guid: 296ab0c24f6ee1a46aedb6b49a76d755,
+    type: 2}
+  deathAttack: {fileID: 0}
+  attackDamage: 750
+  attackCooldown: 3
+  attackRange: 27.5

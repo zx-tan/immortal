@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53a853f6072c8c41b4967bf6a3fb82f, type: 3}
+  m_Name: FlyingPoisonBombs
+  m_EditorClassIdentifier: 
+  id: flyingPoisonBombs
+  longName: Flying Poison Bombs (level 1)
+  shortName: Flying Poison Bombs
+  unitType: 0
+  desc: Flying poison bomb description here.
+  cardUI: {fileID: 21300000, guid: 30116f1af17ab854689831b670e1d4ef, type: 3}
+  maxStack: 2
+  cost: 3
+  isDefensive: 0
+  isOffensive: 1
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1187647440657590, guid: f2f7a6e7d317ed54385fa68854254a75,
+    type: 2}
+  visualPrefab: {fileID: 0}
+  bodyRadius: 0.6
+  initialTowerAngle: 0
+  maxHealth: 0
+  jumpPrepareTime: 0
+  jumpSpeed: 8
+  moveSpeed: 5
+  navAgentRadius: 0.6
+  navAreaMask: 1
+  avoidancePriority: 50
+  searchRate: 0
+  seekRadius: 0
+  typesToSeek: 1
+  favoriteTarget: 1
+  defaultAttack: {fileID: 0}
+  deathAttack: {fileID: 0}
+  attackDamage: 0
+  attackCooldown: 0
+  attackRange: 0
+  formation: 0
+  formationDistance: 1.6
+  formationInitAngle: 0
+  spawnedUnits:
+  - {fileID: 11400000, guid: a5f012cf61ee2f44e9a3fd977874d660, type: 2}
+  - {fileID: 11400000, guid: a5f012cf61ee2f44e9a3fd977874d660, type: 2}
+  - {fileID: 11400000, guid: a5f012cf61ee2f44e9a3fd977874d660, type: 2}
+  - {fileID: 11400000, guid: a5f012cf61ee2f44e9a3fd977874d660, type: 2}
+  - {fileID: 11400000, guid: a5f012cf61ee2f44e9a3fd977874d660, type: 2}

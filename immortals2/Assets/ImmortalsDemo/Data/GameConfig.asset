@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8483bccfa9e31c249aef698044c97b69, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  debugDamageMultiplier: 1
+  heroes:
+  - {fileID: 11400000, guid: ca06c3401d6f916498bc1ebcba48ca37, type: 2}
+  alignments:
+  - {fileID: 11400000, guid: 554db1560726c284a9b6e7f6580c0c03, type: 2}
+  - {fileID: 11400000, guid: 2aaafd1d24f14b44d8562ccc275f6ccd, type: 2}
+  units:
+  - {fileID: 11400000, guid: 6bd9c057a3e3f4b4a983dd124ffdc421, type: 2}
+  - {fileID: 11400000, guid: d913a7f0c941c41459265f9831799f94, type: 2}
+  - {fileID: 11400000, guid: 4a0970a105b9f084fb5a752aba67b461, type: 2}
+  - {fileID: 11400000, guid: 5f76be8288c74ac4789667433c0cd53f, type: 2}
+  - {fileID: 11400000, guid: 2c855f6dbd34ae641b8171b06aa0c278, type: 2}
+  - {fileID: 11400000, guid: a5f012cf61ee2f44e9a3fd977874d660, type: 2}
+  - {fileID: 11400000, guid: 5af8a71713d3353449ecc220e1532577, type: 2}
+  - {fileID: 11400000, guid: 12197884ef2e1e144a19d4b090b0eafa, type: 2}
+  - {fileID: 11400000, guid: 8af4216259482fe45bf62c532eb7c4d6, type: 2}
+  - {fileID: 11400000, guid: 003c852112eaa0840bbd5db8b5ea8a2c, type: 2}
+  - {fileID: 11400000, guid: 9c17a9eb069b9344bba139659aebfaa7, type: 2}
+  - {fileID: 11400000, guid: 6e76558990acb4040a95165a2c4db347, type: 2}
+  - {fileID: 11400000, guid: b9825c30159f37d49911d311d8f9dd8f, type: 2}
+  - {fileID: 11400000, guid: 1e4352094e7f6df4eb6cb552d1bcf132, type: 2}
+  - {fileID: 11400000, guid: 9f0cfefc1643c82499aa9ea6d4c72aa5, type: 2}
+  - {fileID: 11400000, guid: 191ee0e9b2b08d94086829adcefcc71d, type: 2}
+  - {fileID: 11400000, guid: 1ff69f6eb6e29a74ca06a0966043292d, type: 2}
+  - {fileID: 11400000, guid: 88ebe10be5536b24db5acc38e1eb8f07, type: 2}
+  - {fileID: 11400000, guid: ca06c3401d6f916498bc1ebcba48ca37, type: 2}
+  - {fileID: 11400000, guid: a60edbb2b1f3873408cf9bb5c4b6eeba, type: 2}
+  - {fileID: 11400000, guid: 90ab791056817bb4599f596909a5439c, type: 2}
+  - {fileID: 11400000, guid: b8d62d15530fdf0468df910848a57ffe, type: 2}
+  - {fileID: 11400000, guid: c3c9502d9c2c9ea449be75f5c5a97459, type: 2}
+  - {fileID: 11400000, guid: 5e37cb961a821f740964b4ba1a841489, type: 2}
+  - {fileID: 11400000, guid: f9c13a472858e8d4e9e5cd78ef32c560, type: 2}
+  - {fileID: 11400000, guid: 47f04c78fdf6fd04b93bdfac448d32b9, type: 2}
+  effects:
+  - {fileID: 114004877237695530, guid: dda1a1eb818563b468a88bd4d440c3f8, type: 2}
+  projectiles:
+  - {fileID: 114259070133557256, guid: e5d8f6151898b6948badc6e2433609f1, type: 2}
+  - {fileID: 114605158255833092, guid: 622a7f45050f78b408692f6cdfcebb04, type: 2}
+  - {fileID: 114549679202827374, guid: 75fa22a183899104e949ff99fce2077f, type: 2}
+  - {fileID: 114753342113121872, guid: dacdc6c75108fbf4d8aa7329c9adc4b2, type: 2}
+  - {fileID: 114955265611177398, guid: 5c9a82af893230249863be752631d196, type: 2}
+  - {fileID: 114174288520875788, guid: 3696bfd12cf6ec7448d8324bb86716f7, type: 2}
+  - {fileID: 114307318940188570, guid: 4b0e97fcd6687f64483395e0bfb0c9e2, type: 2}
+  - {fileID: 114307318940188570, guid: e0998502ec9d6d5438c97abc8890db44, type: 2}
+  buffs:
+  - {fileID: 11400000, guid: 9ba892bf09b15984d8914eadf747bee7, type: 2}
+  - {fileID: 11400000, guid: c26267f4dc11a4820a5e25240184d44e, type: 2}
+  attackDeckLimit: 80
+  defenseDeckLimit: 70

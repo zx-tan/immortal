@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: Goblin
+  m_EditorClassIdentifier: 
+  id: goblin
+  longName: Goblin (level 1)
+  shortName: Goblin
+  unitType: 3
+  desc: Goblin description here.
+  cardUI: {fileID: 0}
+  maxStack: 2
+  cost: 6
+  isDefensive: 0
+  isOffensive: 0
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1344550618320288, guid: 2dc075a163208b14eaffafebe30c0dc3,
+    type: 2}
+  visualPrefab: {fileID: 1506396930284886, guid: ec46c60507b3f8d48a2c0207274606a7,
+    type: 2}
+  bodyRadius: 1.5
+  initialTowerAngle: 0
+  maxHealth: 500
+  jumpPrepareTime: 0
+  jumpSpeed: 0
+  moveSpeed: 8
+  navAgentRadius: 0.35
+  navAreaMask: 1
+  avoidancePriority: 60
+  searchRate: 0.2
+  seekRadius: 22
+  typesToSeek: 60
+  favoriteTarget: 0
+  defaultAttack: {fileID: 114260027610700438, guid: e4c72823fe1bd8342950a93bc32ef731,
+    type: 2}
+  deathAttack: {fileID: 0}
+  attackDamage: 25
+  attackCooldown: 1.5
+  attackRange: 2

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: Piranha
+  m_EditorClassIdentifier: 
+  id: piranha
+  longName: Piranha (level 1)
+  shortName: Piranha
+  unitType: 2
+  desc: Piranha unit description here.
+  cardUI: {fileID: 0}
+  maxStack: 4
+  cost: 3
+  isOffensive: 0
+  isDefensive: 0
+  defenseController: {fileID: 1919837414422790, guid: 838bc0535861e1a4194cde4bc33cdd77,
+    type: 2}
+  attackController: {fileID: 0}
+  visualPrefab: {fileID: 1572615057457442, guid: 548d707540276c540a937a764e25bb86,
+    type: 2}
+  maxHealth: 200
+  moveSpeed: 0
+  navAreaMask: 1
+  searchRate: 0.2
+  seekRadius: 12
+  typesToSeek: 61
+  favoriteTarget: 0
+  defaultAttack: {fileID: 114260027610700438, guid: c5832ac6023c4bf44ad483af525d4139,
+    type: 2}
+  deathAttack: {fileID: 0}
+  attackDamage: 10
+  attackCooldown: 1
+  attackRange: 3

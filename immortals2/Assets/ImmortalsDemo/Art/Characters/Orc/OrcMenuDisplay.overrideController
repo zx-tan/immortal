@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OrcMenuDisplay
+  m_Controller: {fileID: 9100000, guid: 7f828dba71629bf419355dd6a0a67fdf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6d7ba8542fef6064bb9d8cc2f4e09ec0, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 99ca129cdc0427841bde28737f3b719c, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 47474c5deb4ebee43b9089527fcff172, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 7b5a85903cb1ef24fbf3816615309d22, type: 3}

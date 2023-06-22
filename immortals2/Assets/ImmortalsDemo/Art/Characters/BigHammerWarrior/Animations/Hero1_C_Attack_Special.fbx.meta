@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: 175083f8ba46f8f4a951d9ce506f11f6
+timeCreated: 1513405989
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: B_Strap1_JNT
+    100002: B_Strap2_JNT
+    100004: B_Strap3_JNT
+    100006: Bind_Joints
+    100008: Chest_JNT
+    100010: F_Strap1_JNT
+    100012: F_Strap2_JNT
+    100014: F_Strap3_JNT
+    100016: Geometry
+    100018: hammer_GEO
+    100020: Head_JNT
+    100022: //RootNode
+    100024: L_Ankle_JNT
+    100026: L_Arm_JNT
+    100028: L_Ball_JNT
+    100030: L_Elbow_JNT
+    100032: L_Index_JNT
+    100034: L_IndexTip_JNT
+    100036: L_Knee_JNT
+    100038: L_Middle_JNT
+    100040: L_MiddleTip_JNT
+    100042: L_ShoulderPad_JNT
+    100044: L_Thigh_JNT
+    100046: L_Thumb_JNT
+    100048: L_ThumbTip_JNT
+    100050: L_ToeTip_JNT
+    100052: L_Wrist_JNT
+    100054: Pelvis_JNT
+    100056: R_Ankle_JNT
+    100058: R_Arm_JNT
+    100060: R_Ball_JNT
+    100062: R_Elbow_JNT
+    100064: R_Index_JNT
+    100066: R_IndexTip_JNT
+    100068: R_Knee_JNT
+    100070: R_Middle_JNT
+    100072: R_MiddleTip_JNT
+    100074: R_ShoulderPad_JNT
+    100076: R_Thigh_JNT
+    100078: R_Thumb_JNT
+    100080: R_ThumbTip_JNT
+    100082: R_ToeTip_JNT
+    100084: R_WeaponSocket_JNT
+    100086: R_Wrist_JNT
+    100088: Root_JNT
+    100090: Spine1_JNT
+    100092: warrior_GEO
+    400000: B_Strap1_JNT
+    400002: B_Strap2_JNT
+    400004: B_Strap3_JNT
+    400006: Bind_Joints
+    400008: Chest_JNT
+    400010: F_Strap1_JNT
+    400012: F_Strap2_JNT
+    400014: F_Strap3_JNT
+    400016: Geometry
+    400018: hammer_GEO
+    400020: Head_JNT
+    400022: //RootNode
+    400024: L_Ankle_JNT
+    400026: L_Arm_JNT
+    400028: L_Ball_JNT
+    400030: L_Elbow_JNT
+    400032: L_Index_JNT
+    400034: L_IndexTip_JNT
+    400036: L_Knee_JNT
+    400038: L_Middle_JNT
+    400040: L_MiddleTip_JNT
+    400042: L_ShoulderPad_JNT
+    400044: L_Thigh_JNT
+    400046: L_Thumb_JNT
+    400048: L_ThumbTip_JNT
+    400050: L_ToeTip_JNT
+    400052: L_Wrist_JNT
+    400054: Pelvis_JNT
+    400056: R_Ankle_JNT
+    400058: R_Arm_JNT
+    400060: R_Ball_JNT
+    400062: R_Elbow_JNT
+    400064: R_Index_JNT
+    400066: R_IndexTip_JNT
+    400068: R_Knee_JNT
+    400070: R_Middle_JNT
+    400072: R_MiddleTip_JNT
+    400074: R_ShoulderPad_JNT
+    400076: R_Thigh_JNT
+    400078: R_Thumb_JNT
+    400080: R_ThumbTip_JNT
+    400082: R_ToeTip_JNT
+    400084: R_WeaponSocket_JNT
+    400086: R_Wrist_JNT
+    400088: Root_JNT
+    400090: Spine1_JNT
+    400092: warrior_GEO
+    4300000: warrior_GEO
+    4300002: hammer_GEO
+    7400000: SpecialAttack_A
+    7400002: SpecialAttack_B
+    7400004: SpecialAttack_C
+    7400006: SpecialAttack_Recover
+    7400008: SpecialAttack_C_Loop
+    7400010: SpecialAttack_C_End
+    7400012: SpecialAttack_C_Start
+    9500000: //RootNode
+    13700000: hammer_GEO
+    13700002: warrior_GEO
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SpecialAttack_A
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: PlayEffect
+        data: Smash
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.10978552
+        functionName: Trigger
+        data: HideTargetHelper
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6726399
+        functionName: FX_C_SpecialAttack_00_Start
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8013796
+        functionName: FX_SmallShockwave
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7794478
+        functionName: Trigger
+        data: CameraShakeSoft
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SpecialAttack_B
+      takeName: Take 001
+      firstFrame: 23
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0
+        functionName: PlayEffect
+        data: SecondStrike
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.11574607
+        functionName: Trigger
+        data: HideTargetHelper
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.14356568
+        functionName: Trigger
+        data: LockRotation
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.16227053
+        functionName: PlayEffect
+        data: Smash
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.56796116
+        functionName: FX_C_SpecialAttack_01_Start
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.6796116
+        functionName: FX_MedShockwave
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.8867292
+        functionName: Trigger
+        data: UnlockRotation
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.9286238
+        functionName: Trigger
+        data: ShowTargetHelper
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.68926376
+        functionName: Trigger
+        data: CameraShakeMedium
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SpecialAttack_C
+      takeName: Take 001
+      firstFrame: 65
+      lastFrame: 107
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.26577672
+        functionName: FX_C_SpecialAttack_02_Start
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SpecialAttack_Recover
+      takeName: Take 001
+      firstFrame: 107
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SpecialAttack_C_Loop
+      takeName: Take 001
+      firstFrame: 95
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SpecialAttack_C_End
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SpecialAttack_C_Start
+      takeName: Take 001
+      firstFrame: 65
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.0087715555
+        functionName: PlayEffect
+        data: Smash
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.104155496
+        functionName: Trigger
+        data: HideTargetHelper
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5193401
+        functionName: FX_C_SpecialAttack_02_Start
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.61165047
+        functionName: FX_BigShockwave
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.592638
+        functionName: Trigger
+        data: CameraShakeHard
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

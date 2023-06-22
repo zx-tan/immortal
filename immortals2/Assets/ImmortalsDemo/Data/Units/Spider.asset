@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219af605ca10f04a94eab94574f1198, type: 3}
+  m_Name: Spider
+  m_EditorClassIdentifier: 
+  id: spider
+  longName: Spider (level 1)
+  shortName: Spider
+  unitType: 3
+  desc: Spider description here.
+  cardUI: {fileID: 21300000, guid: 715da08c1690df44fa40cdaacecfecf4, type: 3}
+  maxStack: 2
+  cost: 3
+  isDefensive: 0
+  isOffensive: 1
+  defenseController: {fileID: 0}
+  attackController: {fileID: 1344550618320288, guid: 2dc075a163208b14eaffafebe30c0dc3,
+    type: 2}
+  visualPrefab: {fileID: 1506396930284886, guid: 824daa6cdb982eb4a88a68ddc0acdcf5,
+    type: 2}
+  bodyRadius: 0.35
+  initialTowerAngle: 2
+  maxHealth: 700
+  jumpPrepareTime: 0
+  jumpSpeed: 0
+  moveSpeed: 8
+  navAgentRadius: 0.35
+  navAreaMask: 1
+  avoidancePriority: 60
+  searchRate: 0.2
+  seekRadius: 3
+  typesToSeek: 60
+  favoriteTarget: 0
+  defaultAttack: {fileID: 114260027610700438, guid: 8e059b9a46752c8488be0098c399c0b8,
+    type: 2}
+  deathAttack: {fileID: 114436970522313250, guid: b8a58c09f37789a45b348a76a8ef6110,
+    type: 2}
+  attackDamage: 100
+  attackCooldown: 1
+  attackRange: 3
