@@ -79,6 +79,39 @@ namespace Immortals
 
 		}
 
-	
+		private void CleanUp()
+		{
+			foreach (KeyValuePair<AudioClip, float> pair in lockedByTime)
+			{
+				if (Time.time > pair.Value)
+					toRemove.Add(pair.Key);
+			}
+			for(int i=0; i<toRemove.Count; i++)
+				lockedByTime.Remove(toRemove[i]);
+
+			toRemove.Clear();
+		}
+
+		public bool IsLocked(AudioClip clip)
+		{
+			float endTime = 0.0f;
+			if(lockedByTime.TryGetValue(clip, out endTime))
+				return Time.time < endTime;
+			return false;
+		}
+
+		//public void Lock(AudioClip clip)
+		//{
+		//	Debug.Assert(clip != null);
+		//	Debug.Assert()
+		//	locked.Add(clip);
+		//}
+
+		public void TimedLock(AudioClip clip)
+		{
+			Debug.Assert(clip != null);
+			TimedLock(clip, clip.length);
+		}
+
 	}
 }
