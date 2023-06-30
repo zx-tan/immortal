@@ -24,7 +24,7 @@ namespace Immortals
 		private float currentCleanupTime = 0;
 
 		Dictionary<AudioClip, float> lockedByTime = new Dictionary<AudioClip, float>();
-		//HashSet<AudioClip> locked = new HashSet<AudioClip>();
+		HashSet<AudioClip> locked = new HashSet<AudioClip>();
 		List<AudioClip> toRemove = new List<AudioClip>();
 
 		Dictionary<AudioClip, PlayingEntry> playing = new Dictionary<AudioClip, PlayingEntry>();
@@ -100,12 +100,12 @@ namespace Immortals
 			return false;
 		}
 
-		//public void Lock(AudioClip clip)
-		//{
-		//	Debug.Assert(clip != null);
-		//	Debug.Assert()
-		//	locked.Add(clip);
-		//}
+		public void Lock(AudioClip clip)
+		{
+			Debug.Assert(clip != null);
+			Debug.Assert()
+			locked.Add(clip);
+		}
 
 		public void TimedLock(AudioClip clip)
 		{
@@ -113,5 +113,15 @@ namespace Immortals
 			TimedLock(clip, clip.length);
 		}
 
+		public void TimedLock(AudioClip clip, float lockDuration)
+		{
+			Debug.Assert(clip != null);
+			Debug.Assert(lockDuration > 0);
+
+			if (lockedByTime.ContainsKey(clip))
+				lockedByTime[clip] = Time.time + lockDuration;
+			else
+				lockedByTime.Add(clip, Time.time + lockDuration);
+		}
 	}
 }
