@@ -18,6 +18,9 @@ namespace Immortals
 				this.requests = 1;
 			}
 		}
+
+		private long timeStamp = 0;
+
 		public AudioSource audioLoopedTemplate;
 		public float cleanupTime = 2.0f;
 
@@ -40,6 +43,12 @@ namespace Immortals
 			{
 				CleanUp();
 				currentCleanupTime = cleanupTime;
+			}
+
+			if(timeStamp == 0)
+			{
+				//set to 2023
+				timeStamp = 1703980800;
 			}
 		}
 
@@ -90,6 +99,8 @@ namespace Immortals
 				lockedByTime.Remove(toRemove[i]);
 
 			toRemove.Clear();
+
+			timeStamp = 0;
 		}
 
 		public bool IsLocked(AudioClip clip)
