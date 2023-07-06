@@ -114,9 +114,9 @@ namespace Immortals
 		public void Lock(AudioClip clip)
 		{
 			Debug.Assert(clip != null);
-			Debug.Assert()
+			Debug.Assert();
 			// TODO: problem here
-			//locked.Add(clip);
+			locked.Add(clip);
 		}
 
 		public void TimedLock(AudioClip clip)
