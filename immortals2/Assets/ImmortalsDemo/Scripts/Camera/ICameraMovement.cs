@@ -2,6 +2,6 @@
 {
 	void MoveLeft();
 	void MoveRight();
-	void MoveUp();
-	void MoveDown();
+	void MoveForward();
+	void MoveBack();
 }
