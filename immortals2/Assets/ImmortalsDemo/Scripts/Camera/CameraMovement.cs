@@ -25,5 +25,20 @@ public class CameraMovement : MonoBehaviour, ICameraMovement {
 
 	void Update () {
 
+		float scroll = Input.GetAxis("Mouse ScrollWheel");
+		transform.Translate(0, scroll * zoomSpeed, scroll * zoomSpeed, Space.World);
+
+		if (Input.GetKey(KeyCode.RightArrow)){
+			MoveRight();
+		}
+		if (Input.GetKey(KeyCode.LeftArrow)){
+			MoveLeft();
+		}
+		if (Input.GetKey(KeyCode.UpArrow)){
+			MoveForward();
+		}
+		if (Input.GetKey(KeyCode.DownArrow)){
+			MoveBack();
+		}
 	}
 }
