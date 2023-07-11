@@ -3,6 +3,9 @@ using System.Collections;
 
 public class CameraMovement : MonoBehaviour, ICameraMovement {
 
+	private float speed = 2.0f;
+	private float zoomSpeed = 2.0f;
+
 	void MoveLeft()
 	{
 		transform.position += Vector3.left * speed * Time.deltaTime;
