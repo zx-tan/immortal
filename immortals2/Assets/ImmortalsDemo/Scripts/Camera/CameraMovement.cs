@@ -42,29 +42,29 @@ public class CameraMovement : MonoBehaviour, ICameraMovement {
 		transform.position += Vector3.back * speed * Time.deltaTime;
 	}
 
-	void Update () {
+	void Rotate(float x, float y)
+	{
+		rotationX += x * sensX * Time.deltaTime;
+		rotationY += y * sensY * Time.deltaTime;
+		rotationY = Mathf.Clamp (rotationY, minY, maxY);
+		transform.localEulerAngles = new Vector3 (-rotationY, rotationX, 0);
+	}
 
+	void Update () 
+	{
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
 		transform.Translate(0, scroll * zoomSpeed, scroll * zoomSpeed, Space.World);
 
-		if (Input.GetKey(KeyCode.RightArrow)){
+		if (Input.GetKey(KeyCode.RightArrow))
 			MoveRight();
-		}
-		if (Input.GetKey(KeyCode.LeftArrow)){
+		if (Input.GetKey(KeyCode.LeftArrow))
 			MoveLeft();
-		}
-		if (Input.GetKey(KeyCode.UpArrow)){
+		if (Input.GetKey(KeyCode.UpArrow))
 			MoveForward();
-		}
-		if (Input.GetKey(KeyCode.DownArrow)){
+		if (Input.GetKey(KeyCode.DownArrow))
 			MoveBack();
-		}
 
-		if (Input.GetMouseButton (0)) {
-			rotationX += Input.GetAxis ("Mouse X") * sensX * Time.deltaTime;
-			rotationY += Input.GetAxis ("Mouse Y") * sensY * Time.deltaTime;
-			rotationY = Mathf.Clamp (rotationY, minY, maxY);
-			transform.localEulerAngles = new Vector3 (-rotationY, rotationX, 0);
-		}
+		if (Input.GetMouseButton (0))
+			Rotate(Input.GetAxis ("Mouse X"), Input.GetAxis ("Mouse Y"));
 	}
 }
