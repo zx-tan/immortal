@@ -5,4 +5,5 @@
 	void MoveForward();
 	void MoveBack();
 	void Rotate(float x, float y);
+	void Zoom(float factor);
 }

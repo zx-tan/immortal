@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraMovement : MonoBehaviour, ICameraMovement {
-
+public class CameraMovement : MonoBehaviour, ICameraMovement
+{
+	[SerializeField]
 	private float speed = 2.0f;
+	[SerializeField]
 	private float zoomSpeed = 2.0f;
 
 	// rotation related members
@@ -16,8 +18,8 @@ public class CameraMovement : MonoBehaviour, ICameraMovement {
 	public float sensX = 100.0f;
 	public float sensY = 100.0f;
 	
-	float rotationY = 0.0f;
-	float rotationX = 0.0f;
+	private float rotationY = 0.0f;
+	private float rotationX = 0.0f;
 
 	private float yaw = 0.0f;
 	private float pitch = 0.0f;
@@ -50,10 +52,14 @@ public class CameraMovement : MonoBehaviour, ICameraMovement {
 		transform.localEulerAngles = new Vector3 (-rotationY, rotationX, 0);
 	}
 
+	void Zoom(float factor)
+	{
+		transform.Translate(0, factor * zoomSpeed, factor * zoomSpeed, Space.World);
+	}
+
 	void Update () 
 	{
-		float scroll = Input.GetAxis("Mouse ScrollWheel");
-		transform.Translate(0, scroll * zoomSpeed, scroll * zoomSpeed, Space.World);
+		Zoom(Input.GetAxis("Mouse ScrollWheel"));
 
 		if (Input.GetKey(KeyCode.RightArrow))
 			MoveRight();
