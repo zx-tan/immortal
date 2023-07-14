@@ -12,6 +12,10 @@ public class FollowCamera : MonoBehaviour, IFollow
     public Vector3 targetOffset;
     public float zoomDistance = 10.0f;
 
+    //smoothing
+    [Range(0, 65)]
+    public float damping = 2.0f;
+
     private void Update()
     {
         // Early out if we don't have a target
