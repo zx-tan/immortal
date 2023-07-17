@@ -34,5 +34,8 @@ public class FollowCamera : MonoBehaviour, IFollow
 
         // Update position
         transform.position = Vector3.Lerp(transform.position, wantedPosition, damping * Time.deltaTime);
+
+        // Always look at the target
+        transform.LookAt(target.transform.position + targetOffset);
     }
 }
