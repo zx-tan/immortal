@@ -11,19 +11,20 @@ public class FollowCameraControls : MonoBehaviour
     private float startYRotation;
     [SerializeField]
     private float startZoomDistance;
+    [SerializeField]
+    private float rotationSpeed;
+    [SerializeField]
+    private float minXRotation;
+    [SerializeField]
+    private float maxXRotation;
+
+    private bool updateRotation = true;
 
     [Range(0, 65)]
     public float damping;
 
     void Awake()
     {
-        //if (targetCamera == null)
-        //    targetCamera = Camera.main;
-
-        //targetFollowCamera = targetCamera.gameObject.GetComponent<FollowCamera>();
-        //if (targetFollowCamera == null)
-        //    targetFollowCamera = targetCamera.gameObject.AddComponent<FollowCamera>();
-
         targetFollowCamera.xRotation = startXRotation;
         targetFollowCamera.yRotation = startYRotation;
         targetFollowCamera.zoomDistance = startZoomDistance;
@@ -34,5 +35,14 @@ public class FollowCameraControls : MonoBehaviour
     {
         targetFollowCamera.target = target;
         targetFollowCamera.targetOffset = targetOffset;
+
+        if (updateRotation)
+        {
+            var mX = InputManager.GetAxis("Mouse X", false);
+            var mY = InputManager.GetAxis("Mouse Y", false);
+            targetFollowCamera.xRotation -= mY * rotationSpeed;
+            targetFollowCamera.xRotation = Mathf.Clamp(targetFollowCamera.xRotation, minXRotation, maxXRotation);
+            targetFollowCamera.yRotation += mX * rotationSpeed;
+        }
     }
 }
