@@ -40,9 +40,14 @@ public class FollowCameraControls : MonoBehaviour
         {
             var mX = InputManager.GetAxis("Mouse X", false);
             var mY = InputManager.GetAxis("Mouse Y", false);
-            targetFollowCamera.xRotation -= mY * rotationSpeed;
-            targetFollowCamera.xRotation = Mathf.Clamp(targetFollowCamera.xRotation, minXRotation, maxXRotation);
-            targetFollowCamera.yRotation += mX * rotationSpeed;
+            UpdateFollowCameraRotation(mX, mY);
         }
+    }
+
+    private void UpdateFollowCameraRotation(float x, float y)
+    {
+        targetFollowCamera.xRotation -= y * rotationSpeed;
+        targetFollowCamera.xRotation = Mathf.Clamp(targetFollowCamera.xRotation, minXRotation, maxXRotation);
+        targetFollowCamera.yRotation += x * rotationSpeed;
     }
 }
