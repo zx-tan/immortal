@@ -6,15 +6,15 @@ public class FollowCamera : MonoBehaviour, IFollow
     private Transform target;
     public Transform Target { get { return target; } }
 
-    private float xRotation;
-    private float yRotation;
+    public float xRotation;
+    public float yRotation;
     private bool useTargetYRotation;
     private Vector3 targetOffset;
-    private float zoomDistance = 10.0f;
+    public float zoomDistance = 10.0f;
 
     //smoothing
     [Range(0, 65)]
-    private float damping = 2.0f;
+    public float damping = 2.0f;
 
     private void Update()
     {
