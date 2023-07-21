@@ -4,12 +4,14 @@ public class FollowCamera : MonoBehaviour, IFollow
 {
     [SerializeField]
     private Transform target;
+    [SerializeField]
+    private bool useTargetYRotation = true;
+
     public Transform Target { get { return target; } }
 
     public float xRotation;
     public float yRotation;
-    private bool useTargetYRotation;
-    private Vector3 targetOffset;
+    public Vector3 targetOffset;
     public float zoomDistance = 10.0f;
 
     //smoothing

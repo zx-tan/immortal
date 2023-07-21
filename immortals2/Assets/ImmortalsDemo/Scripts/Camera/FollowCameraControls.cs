@@ -52,8 +52,7 @@ public class FollowCameraControls : MonoBehaviour
         if (updateZoom)
         {
             var mZ = InputManager.GetAxis("Mouse ScrollWheel", false);
-            targetFollowCamera.zoomDistance += mZ * zoomSpeed;
-            targetFollowCamera.zoomDistance = Mathf.Clamp(targetFollowCamera.zoomDistance, minZoomDistance, maxZoomDistance);
+            UpdateFollowCameraZoom(mZ);
         }
     }
 
@@ -62,5 +61,11 @@ public class FollowCameraControls : MonoBehaviour
         targetFollowCamera.xRotation -= y * rotationSpeed;
         targetFollowCamera.xRotation = Mathf.Clamp(targetFollowCamera.xRotation, minXRotation, maxXRotation);
         targetFollowCamera.yRotation += x * rotationSpeed;
+    }
+
+    private void UpdateFollowCameraZoom(float z)
+    {
+        targetFollowCamera.zoomDistance += mZ * zoomSpeed;
+        targetFollowCamera.zoomDistance = Mathf.Clamp(targetFollowCamera.zoomDistance, minZoomDistance, maxZoomDistance);
     }
 }
