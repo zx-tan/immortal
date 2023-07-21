@@ -17,8 +17,14 @@ public class FollowCameraControls : MonoBehaviour
     private float minXRotation;
     [SerializeField]
     private float maxXRotation;
-
+    [SerializeField]
     private bool updateRotation = true;
+    [SerializeField]
+    private bool updateZoom = true;
+    [SerializeField]
+    private float minZoomDistance;
+    [SerializeField]
+    private float maxZoomDistance;
 
     [Range(0, 65)]
     public float damping;
@@ -41,6 +47,13 @@ public class FollowCameraControls : MonoBehaviour
             var mX = InputManager.GetAxis("Mouse X", false);
             var mY = InputManager.GetAxis("Mouse Y", false);
             UpdateFollowCameraRotation(mX, mY);
+        }
+
+        if (updateZoom)
+        {
+            var mZ = InputManager.GetAxis("Mouse ScrollWheel", false);
+            targetFollowCamera.zoomDistance += mZ * zoomSpeed;
+            targetFollowCamera.zoomDistance = Mathf.Clamp(targetFollowCamera.zoomDistance, minZoomDistance, maxZoomDistance);
         }
     }
 
