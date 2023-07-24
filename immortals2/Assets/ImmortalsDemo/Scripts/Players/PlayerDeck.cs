@@ -6,9 +6,9 @@ namespace Immortals
 
 	public class PlayerDeck : PlayerSystem
 	{
-		public HeroConfig selectedHero;
-		public List<StackedCard> defenseCards = new List<StackedCard>();
-		public List<StackedCard> attackCards = new List<StackedCard>();
+		[SerializeField] private HeroConfig selectedHero;
+		[SerializeField] private List<StackedCard> defenseCards = new List<StackedCard>();
+		[SerializeField] private List<StackedCard> attackCards = new List<StackedCard>();
 
 		private GameController gameControlCache;
 
