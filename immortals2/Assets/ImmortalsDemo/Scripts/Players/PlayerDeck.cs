@@ -24,10 +24,7 @@ namespace Immortals
 		public int CurrentDefenseDeckCost {
 			get
 			{
-				int resultCost = 0;
-				foreach (StackedCard card in defenseCards)
-					resultCost += card.type.cost * card.stack;
-				return resultCost;
+				return CalculateDeckCost(defenseCards);
 			}
 		}
 
@@ -35,16 +32,16 @@ namespace Immortals
 		{
 			get
 			{
-				int resultCost = 0;
-				foreach(StackedCard card in attackCards)
-					resultCost += card.type.cost * card.stack;
-				return resultCost;
+				return CalculateDeckCost(attackCards);
 			}
 		}
 
-
-		public void OnEnable()
+		private int CalculateDeckCost(List<StackedCard> stackedCards)
 		{
+			int resultCost = 0;
+			foreach(StackedCard card in stackedCards)
+				resultCost += card.type.cost * card.stack;
+			return resultCost;
 		}
 
 		public bool TryAddDefenseCard(string cardId)
@@ -84,45 +81,53 @@ namespace Immortals
 			if (CurrentAttackDeckCost + unitConfig.cost > GameControl.Config.attackDeckLimit)
 				return false;
 
-			if (attackCards.Count == 0)
+			return TryAddCard(unitConfig, attackCards);
+		}
+
+		private bool TryAddCard(UnitConfig unitConfig, List<StackedCard> stackedCards)
+		{
+			if (stackedCards.Count == 0)
 			{
-				attackCards.Add(new StackedCard(unitConfig));
+				stackedCards.Add(new StackedCard(unitConfig));
 			}
-			else if(attackCards[attackCards.Count-1].type == unitConfig)
+			else if(stackedCards[stackedCards.Count-1].type == unitConfig)
 			{
-				if (attackCards[attackCards.Count - 1].CanStack(1))
-					attackCards[attackCards.Count - 1].StackPush();
+				if (stackedCards[stackedCards.Count - 1].CanStack(1))
+					stackedCards[stackedCards.Count - 1].StackPush();
 				else
 					return false;
 			}
 			else
-				attackCards.Add(new StackedCard(unitConfig));
+				stackedCards.Add(new StackedCard(unitConfig));
 
 			return true;
 		}
 
 		public bool TryRemoveDefenseCard(int cardIndex)
 		{
-			if (cardIndex < 0 || cardIndex >= defenseCards.Count)
-				return false;
-
-			if (defenseCards[cardIndex].stack == 1)
-				defenseCards.RemoveAt(cardIndex);
-			else
-				defenseCards[cardIndex].StackPop();
-			return true;
+			return TryRemoveCard(cardIndex, defenseCards);
 		}
 
 		public bool TryRemoveAttackCard(int cardIndex)
 		{
-			if (cardIndex < 0 || cardIndex >= attackCards.Count)
+			return TryRemoveCard(cardIndex, attackCards);
+		}
+
+		private bool TryRemoveCard(int cardIndex, List<StackedCard> stackedCards)
+		{
+			if (IsCardIndexValid(stackedCards))
 				return false;
 
-			if (attackCards[cardIndex].stack == 1)
-				attackCards.RemoveAt(cardIndex);
+			if (stackedCards[cardIndex].stack == 1)
+				stackedCards.RemoveAt(cardIndex);
 			else
-				attackCards[cardIndex].StackPop();
+				stackedCards[cardIndex].StackPop();
 			return true;
+		}
+
+		private bool IsCardIndexValid(List<StackedCard> stackedCards)
+		{
+			return cardIndex < 0 || cardIndex >= stackedCards.Count;
 		}
 	}
 }
