@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Immortals
 {
 
-	public class PlayerDeck : PlayerSystem
+	public class PlayerDeck : PlayerSystem, IDeck
 	{
 		[SerializeField] private HeroConfig selectedHero;
 		[SerializeField] private List<StackedCard> defenseCards = new List<StackedCard>();
@@ -12,7 +12,7 @@ namespace Immortals
 
 		private GameController gameControlCache;
 
-		public GameController GameControl {
+		private GameController GameControl {
 			get
 			{
 				if (gameControlCache == null)
