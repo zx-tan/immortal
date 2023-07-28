@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterModel : MonoBehaviour
+public class CharacterModel : MonoBehaviour, IModel
 {
     [SerializeField] private Transform headContainer;
     [SerializeField] private  Transform rightHandContainer;
