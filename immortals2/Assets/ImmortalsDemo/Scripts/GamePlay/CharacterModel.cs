@@ -28,11 +28,33 @@ public class CharacterModel : MonoBehaviour, IModel
         headModel = AddModel(model, headContainer, null);
     }
 
-    public void SetWeaponModel(GameObject rightHandModel, GameObject leftHandModel, GameObject shieldModel)
+    public void SetEquipmentModel(GameObject rightHandModel, GameObject leftHandModel, GameObject shieldModel)
     {
         ClearGameObjects(weaponModels);
         AddModel(rightHandModel, rightHandContainer, weaponModels);
         AddModel(leftHandModel, leftHandContainer, weaponModels);
         AddModel(shieldModel, shieldContainer, weaponModels);
+    }
+
+    private void ClearGameObjects(List<GameObject> list)
+    {
+        foreach (var entry in list)
+            Destroy(entry);
+        list.Clear();
+    }
+
+    private GameObject AddModel(GameObject model, Transform transform, List<GameObject> list)
+    {
+        if (model == null)
+            return null;
+        var newModel = Instantiate(model);
+        newModel.transform.parent = transform;
+        newModel.transform.localPosition = Vector3.zero;
+        newModel.transform.localEulerAngles = Vector3.zero;
+        newModel.transform.localScale = Vector3.one;
+        newModel.gameObject.SetActive(true);
+        if (list != null)
+            list.Add(newModel);
+        return newModel;
     }
 }
