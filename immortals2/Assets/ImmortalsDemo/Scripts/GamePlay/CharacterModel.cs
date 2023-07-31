@@ -10,7 +10,7 @@ public class CharacterModel : MonoBehaviour, IModel
     [SerializeField] private  Transform shieldContainer;
     [SerializeField] private  Transform headContainer;
 
-    private Animator tempAnimator
+    private Animator tempAnimator;
     private GameObject headModel;
     private readonly List<GameObject> weaponModels = new List<GameObject>();
 
@@ -47,7 +47,7 @@ public class CharacterModel : MonoBehaviour, IModel
     {
         if (model == null)
             return null;
-        var newModel = Instantiate(model);
+        var newModel = InstantiateModel(model, tran);
         newModel.transform.parent = transform;
         newModel.transform.localPosition = Vector3.zero;
         newModel.transform.localEulerAngles = Vector3.zero;
@@ -55,6 +55,18 @@ public class CharacterModel : MonoBehaviour, IModel
         newModel.gameObject.SetActive(true);
         if (list != null)
             list.Add(newModel);
+        return newModel;
+    }
+
+    private GameObject InstantiateModel(GameObject model, Transform transform)
+    {
+        var newModel = Instantiate(model);
+        newModel.transform.parent = transform;
+        newModel.transform.localPosition = Vector3.zero;
+        newModel.transform.localEulerAngles = Vector3.zero;
+        newModel.transform.localScale = Vector3.one;
+        newModel.gameObject.SetActive(true);
+
         return newModel;
     }
 }
