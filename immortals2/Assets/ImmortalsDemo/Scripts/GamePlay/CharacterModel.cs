@@ -47,12 +47,7 @@ public class CharacterModel : MonoBehaviour, IModel
     {
         if (model == null)
             return null;
-        var newModel = InstantiateModel(model, tran);
-        newModel.transform.parent = transform;
-        newModel.transform.localPosition = Vector3.zero;
-        newModel.transform.localEulerAngles = Vector3.zero;
-        newModel.transform.localScale = Vector3.one;
-        newModel.gameObject.SetActive(true);
+        var newModel = InstantiateModel(model, transform);
         if (list != null)
             list.Add(newModel);
         return newModel;
