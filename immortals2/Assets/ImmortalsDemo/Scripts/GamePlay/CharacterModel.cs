@@ -10,30 +10,30 @@ public class CharacterModel : MonoBehaviour, IModel
     [SerializeField] private  Transform shieldContainer;
     [SerializeField] private  Transform headContainer;
 
-    private Animator tempAnimator;
-    private GameObject headModel;
-    private readonly List<GameObject> weaponModels = new List<GameObject>();
+    private Animator _animator;
+    private GameObject _headModel;
+    private readonly List<GameObject> _weaponModels = new List<GameObject>();
 
-    public Animator TempAnimator { get { return tempAnimator; } }
+    public Animator Animator { get { return _animator; } }
 
     private void Start()
     {
-        tempAnimator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     public void SetHeadModel(GameObject model)
     {
-        if (headModel != null)
-            Destroy(headModel);
-        headModel = AddModel(model, headContainer, null);
+        if (_headModel != null)
+            Destroy(_headModel);
+        _headModel = AddModel(model, headContainer, null);
     }
 
     public void SetEquipmentModel(GameObject rightHandModel, GameObject leftHandModel, GameObject shieldModel)
     {
-        ClearGameObjects(weaponModels);
-        AddModel(rightHandModel, rightHandContainer, weaponModels);
-        AddModel(leftHandModel, leftHandContainer, weaponModels);
-        AddModel(shieldModel, shieldContainer, weaponModels);
+        ClearGameObjects(_weaponModels);
+        AddModel(rightHandModel, rightHandContainer, _weaponModels);
+        AddModel(leftHandModel, leftHandContainer, _weaponModels);
+        AddModel(shieldModel, shieldContainer, _weaponModels);
     }
 
     private void ClearGameObjects(List<GameObject> list)
