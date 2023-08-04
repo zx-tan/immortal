@@ -14,5 +14,13 @@ namespace Immortal
 		{
 			
 		}
+
+		public void Dispatch(GameMessage msg)
+		{
+		}
+		
+		public void DelayedDispatch(float delay, Message msg)
+		{
+		}
 	}
 }
