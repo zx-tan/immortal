@@ -12,7 +12,7 @@ namespace Immortal
 			void OnMessage(M msg);
 		}
 
-		private Dictionary<Type, List<IListener>> listeners = new Dictionary<Type, List<IListener>>();
+		private Dictionary<Type, List<IListener>> _listeners = new Dictionary<Type, List<IListener>>();
 
 		public void RegisterListener<T>(IListener listener) where T : M
 		{
@@ -26,20 +26,20 @@ namespace Immortal
 
 		private void RegisterListener(Type msgType, IListener listener)
 		{
-			if (!listeners.ContainsKey(msgType))
+			if (!_listeners.ContainsKey(msgType))
 			{
-				listeners.Add(msgType, new List<IListener>());
+				_listeners.Add(msgType, new List<IListener>());
 			}
 
-			if (!listeners[msgType].Contains(listener))
+			if (!_listeners[msgType].Contains(listener))
 			{
-				listeners[msgType].Add(listener);
+				_listeners[msgType].Add(listener);
 			}
 		}
 
 		private void UnregisterListener(Type msgType, IListener listener)
 		{
-			if (listeners.TryGetValue(msgType, out var node))
+			if (_listeners.TryGetValue(msgType, out var node))
 			{
 				if (node.Contains(listener))
 				{
@@ -48,7 +48,7 @@ namespace Immortal
 				
 				if (node.Count == 0)
 				{
-					listeners.Remove(msgType);
+					_listeners.Remove(msgType);
 				}
 			}
 		}
