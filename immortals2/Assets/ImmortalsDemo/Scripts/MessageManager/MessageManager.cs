@@ -26,6 +26,16 @@ namespace Immortal
 		
 		public void DelayedDispatch(float delay, Message msg)
 		{
+			StartCoroutine(DelayedDispatcher(delay, msg));
+		}
+
+		private IEnumerator DelayedDispatcher(float delay, Message msg)
+		{
+			if (delay > 0.0f)
+			{
+				yield return new WaitForSecondsRealtime(delay);
+			}
+			_messageDispatchers.Dispatch(msg);
 		}
 	}
 }
