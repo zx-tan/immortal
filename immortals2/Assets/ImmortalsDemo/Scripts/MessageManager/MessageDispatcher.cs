@@ -14,6 +14,23 @@ namespace Immortal
 
 		private Dictionary<Type, List<IListener>> _listeners = new Dictionary<Type, List<IListener>>();
 
+		public void Dispatch(M msg)
+		{
+			Debug.Assert(msg != null, "Invalid param. msg shouldn't be null.");
+
+			Type msgType = msg.GetType();
+			foreach (var pair in _listeners)
+			{
+				if (pair.Key.IsAssignableFrom(msgType))
+				{
+					foreach (IListener listener in pair.Value)
+					{
+						listener.OnMessage(msg);
+					}
+				}
+			}
+		}
+
 		public void RegisterListener<T>(IListener listener) where T : M
 		{
 			RegisterListener(typeof(T), listener);
