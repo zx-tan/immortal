@@ -10,5 +10,7 @@ namespace Immortals
 		{
 			this.gameObject.SetActive(display)
 		}
+
+		public abstract void ResetView();
 	}
 }
