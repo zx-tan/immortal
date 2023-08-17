@@ -4,6 +4,6 @@
 	public interface IUIViewManager
 	{
 		void AddView(UIViewControllerBase ui);
-		void RemoveView(UIViewControllerBase ui);
+		void RemoveCurrentView();
 	}
 }

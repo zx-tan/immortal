@@ -6,14 +6,16 @@ namespace Immortals
 
 	public abstract class UIViewManager : Monobehaviour, IUIViewManager
 	{
+		Stack<UIViewControllerBase> views = new Stack<UIViewControllerBase>();
+
 		public void AddView(UIViewControllerBase ui)
 		{
-
+			views.Push(ui);
 		}
 
-		public void RemoveView(UIViewControllerBase ui)
+		public void RemoveCurrentView()
 		{
-
+			views.Pop();
 		}
 	}
 }
