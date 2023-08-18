@@ -12,5 +12,6 @@ namespace Immortals
 		}
 
 		public abstract void ResetView();
+		public abstract void UpdateView();
 	}
 }

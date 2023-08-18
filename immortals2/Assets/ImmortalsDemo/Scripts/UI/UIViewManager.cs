@@ -17,5 +17,15 @@ namespace Immortals
 		{
 			views.Pop();
 		}
+
+		public void Reset()
+		{
+			views.Clear();
+		}
+
+		private Update()
+		{
+			
+		}
 	}
 }

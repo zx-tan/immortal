@@ -5,5 +5,6 @@
 	{
 		void AddView(UIViewControllerBase ui);
 		void RemoveCurrentView();
+		void Reset();
 	}
 }
