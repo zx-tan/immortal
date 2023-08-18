@@ -25,7 +25,8 @@ namespace Immortals
 
 		private Update()
 		{
-			
+			UIViewControllerBase ui = views.Peek();
+			ui.UpdateView();
 		}
 	}
 }
