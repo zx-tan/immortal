@@ -15,7 +15,7 @@ namespace Immortals
 		[Header("Pool")]
 		[SerializeField] private GameObject _poolCardPrefab;
 		[SerializeField] private Transform _poolContent;
-		[SerializeField] private Text foundInPoolText;
+		[SerializeField] private Text _foundInPoolText;
 
 		private DECK_VIEW _deckView;
 		private GameController gameController;
@@ -77,11 +77,11 @@ namespace Immortals
 				cardRoot.transform.SetAsFirstSibling();
 				count++;
 			}
-			if (foundInPoolText != null)
+			if (_foundInPoolText != null)
 			{
 				int total = gameController.Config.units.Count;
 				string finalText = string.Format("Found: {0}/{1}", count, total);
-				foundInPoolText.text = Game.GetSystem<LanguageSystem>().GetText(finalText);
+				_foundInPoolText.text = Game.GetSystem<LanguageSystem>().GetText(finalText);
 			}
 		}
 
