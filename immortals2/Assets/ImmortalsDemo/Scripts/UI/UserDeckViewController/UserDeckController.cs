@@ -44,20 +44,24 @@ namespace Immortals
 
 		public void OnViewDefenseDeck()
 		{
-			if (gameController != null)
+			if (gameController == null)
 			{
-				_deckView = DEFENSE_VIEW;
-				FillCardPool(gameController.Config.DefensiveUnits);
+				return;
 			}
+			
+			_deckView = DEFENSE_VIEW;
+			FillCardPool(gameController.Config.DefensiveUnits);
 		}
 
 		public void OnViewAttackDeck()
 		{
-			if (gameController != null)
+			if (gameController == null)
 			{
-				_deckView = ATTACK_VIEW;
-				FillCardPool(gameController.Config.AttackUnits);
+				return;
 			}
+
+			_deckView = ATTACK_VIEW;
+			FillCardPool(gameController.Config.AttackUnits);
 		}
 
 		private void FillCardPool(IEnumerable<UnitConfig> poolProvider)
