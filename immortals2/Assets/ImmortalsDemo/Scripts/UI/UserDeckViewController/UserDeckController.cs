@@ -18,17 +18,18 @@ namespace Immortals
 		[SerializeField] private Text _foundInPoolText;
 
 		private DECK_VIEW _deckView;
-		private GameController gameController;
-		private PlayerDeck playerDeck;
+		private GameController _gameController;
+		private PlayerDeck _playerDeck;
+		
 		private Player LocalPlayer { get { return Game.GetSystem<GameController>().localPlayer; } }
 
 		protected PlayerDeck Deck 
 		{
 			get
 			{
-				if (playerDeck == null && LocalPlayer != null)
-					playerDeck = LocalPlayer.GetComponent<PlayerDeck>();
-				return playerDeck;
+				if (_playerDeck == null && LocalPlayer != null)
+					_playerDeck = LocalPlayer.GetComponent<PlayerDeck>();
+				return _playerDeck;
 			}
 		}
 
@@ -36,32 +37,32 @@ namespace Immortals
 		{
 			if (LocalPlayer != null)
 			{
-				playerDeck = LocalPlayer.GetComponent<PlayerDeck>();
+				_playerDeck = LocalPlayer.GetComponent<PlayerDeck>();
 			}
 
-			gameController = Game.GetSystem<GameController>();
+			_gameController = Game.GetSystem<GameController>();
 		}
 
 		public void OnViewDefenseDeck()
 		{
-			if (gameController == null)
+			if (_gameController == null)
 			{
 				return;
 			}
 			
 			_deckView = DEFENSE_VIEW;
-			FillCardPool(gameController.Config.DefensiveUnits);
+			FillCardPool(_gameController.Config.DefensiveUnits);
 		}
 
 		public void OnViewAttackDeck()
 		{
-			if (gameController == null)
+			if (_gameController == null)
 			{
 				return;
 			}
 
 			_deckView = ATTACK_VIEW;
-			FillCardPool(gameController.Config.AttackUnits);
+			FillCardPool(_gameController.Config.AttackUnits);
 		}
 
 		private void FillCardPool(IEnumerable<UnitConfig> poolProvider)
