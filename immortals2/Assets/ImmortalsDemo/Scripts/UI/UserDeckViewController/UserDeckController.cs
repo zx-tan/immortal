@@ -20,7 +20,7 @@ namespace Immortals
 		private DECK_VIEW _deckView;
 		private GameController _gameController;
 		private PlayerDeck _playerDeck;
-		
+
 		private Player LocalPlayer { get { return Game.GetSystem<GameController>().localPlayer; } }
 
 		protected PlayerDeck Deck 
@@ -51,7 +51,7 @@ namespace Immortals
 			}
 			
 			_deckView = DEFENSE_VIEW;
-			FillCardPool(_gameController.Config.DefensiveUnits);
+			InitialiseDeckContent(_gameController.Config.DefensiveUnits);
 		}
 
 		public void OnViewAttackDeck()
@@ -62,7 +62,13 @@ namespace Immortals
 			}
 
 			_deckView = ATTACK_VIEW;
-			FillCardPool(_gameController.Config.AttackUnits);
+			InitialiseDeckContent(_gameController.Config.AttackUnits);
+		}
+
+		private void InitialiseDeckContent(IEnumerable<UnitConfig> poolProvider)
+		{
+			ClearContent(_poolContent);
+			FillCardPool(poolProvider);
 		}
 
 		private void FillCardPool(IEnumerable<UnitConfig> poolProvider)
@@ -87,6 +93,15 @@ namespace Immortals
 				int total = gameController.Config.units.Count;
 				string finalText = string.Format("Found: {0}/{1}", count, total);
 				_foundInPoolText.text = Game.GetSystem<LanguageSystem>().GetText(finalText);
+			}
+		}
+
+		private void ClearContent(Transform content)
+		{
+			for(int i= content.childCount-1; i>=0; i--)
+			{
+				Transform child = content.GetChild(i);
+				GameObject.Destroy(child.gameObject);
 			}
 		}
 
