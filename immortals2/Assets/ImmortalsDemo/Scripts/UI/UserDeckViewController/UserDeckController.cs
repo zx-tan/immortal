@@ -12,6 +12,12 @@ namespace Immortals
 			DEFENSE_VIEW
 		}
 
+		[Header("Deck")]
+		[SerializeField] private GameObject _deckCardPrefab;
+		[SerializeField] private Transform _deckContentAttack;
+		[SerializeField] private Image _deckCostBar;
+		[SerializeField] private Text _deckCostText;
+
 		[Header("Pool")]
 		[SerializeField] private GameObject _poolCardPrefab;
 		[SerializeField] private Transform _poolContent;
@@ -63,12 +69,47 @@ namespace Immortals
 
 			_deckView = ATTACK_VIEW;
 			InitialiseDeckContent(_gameController.Config.AttackUnits);
+			RefreshAttackDeck();
 		}
 
 		private void InitialiseDeckContent(IEnumerable<UnitConfig> poolProvider)
 		{
 			ClearContent(_poolContent);
 			FillCardPool(poolProvider);
+		}
+
+		private void RefreshAttackDeck()
+		{
+			ClearContent(_deckContentAttack);
+			if (Deck != null)
+			{
+				FillCardDeck(Deck.attackCards, _deckContentAttack);
+
+				if (_deckCostBar != null)
+					_deckCostBar.fillAmount = (float)Deck.CurrentAttackDeckCost / _gameController.Config.attackDeckLimit;
+				if (_deckCostText != null)
+					_deckCostText.text = Deck.CurrentAttackDeckCost + "/" + _gameController.Config.attackDeckLimit;
+			}
+		}
+
+		private void FillCardDeck(IEnumerable<StackedCard> deckProvider, Transform parent)
+		{
+			if (poolCardPrefab == null || poolContent == null)
+				return;
+
+			int index = 0;
+			foreach (StackedCard stack in deckProvider)
+			{
+				GameObject cardRoot = GameObject.Instantiate(deckCardPrefab, parent);
+				UICardItem cardUI = cardRoot.GetComponent<UICardItem>();
+				cardUI.Setup(stack.type);
+				cardUI.Index = index;
+				cardUI.SetCardAmount(stack.stack);
+				cardUI.RemoveRequested.AddListener(OnCardRemoveClicked);
+				cardUI.UpgradeRequested.AddListener(OnCardUpgradeClicked);
+				cardRoot.SetActive(true);
+				index++;
+			}
 		}
 
 		private void FillCardPool(IEnumerable<UnitConfig> poolProvider)
