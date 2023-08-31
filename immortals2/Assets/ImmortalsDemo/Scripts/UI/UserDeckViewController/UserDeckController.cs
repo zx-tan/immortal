@@ -94,14 +94,13 @@ namespace Immortals
 
 		private void FillCardDeck(IEnumerable<StackedCard> deckProvider, Transform parent)
 		{
-			if (poolCardPrefab == null || poolContent == null)
+			if (_poolCardPrefab == null || _poolContent == null)
 				return;
 
 			int index = 0;
 			foreach (StackedCard stack in deckProvider)
 			{
-				GameObject cardRoot = GameObject.Instantiate(deckCardPrefab, parent);
-				UICardItem cardUI = cardRoot.GetComponent<UICardItem>();
+				UICardItem cardUI = CreateCardItem(_deckCardPrefab, parent);
 				cardUI.Setup(stack.type);
 				cardUI.Index = index;
 				cardUI.SetCardAmount(stack.stack);
@@ -120,8 +119,7 @@ namespace Immortals
 			int count = 0;
 			foreach (UnitConfig unit in poolProvider)
 			{
-				GameObject cardRoot = GameObject.Instantiate(_poolCardPrefab, _poolContent);
-				UICardItem cardUI = cardRoot.GetComponent<UICardItem>();
+				UICardItem cardUI = CreateCardItem(_poolCardPrefab, _poolContent);
 				cardUI.Setup(unit);
 				cardUI.UseRequested.AddListener(this.OnCardUseClicked);
 				cardUI.UpgradeRequested.AddListener(this.OnCardUpgradeClicked);
@@ -135,6 +133,14 @@ namespace Immortals
 				string finalText = string.Format("Found: {0}/{1}", count, total);
 				_foundInPoolText.text = Game.GetSystem<LanguageSystem>().GetText(finalText);
 			}
+		}
+
+		private UICardItem CreateCardItem(GameObject prefab, Transform parent)
+		{
+			GameObject cardRoot = GameObject.Instantiate(prefab, parent);
+			UICardItem cardUI = cardRoot.GetComponent<UICardItem>();
+
+			return cardUI;
 		}
 
 		private void ClearContent(Transform content)
